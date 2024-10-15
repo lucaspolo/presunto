@@ -32,5 +32,7 @@ func main() {
 		})
 	})
 
-	r.Run()
+	if err := r.Run(); err != nil {
+		panic(err)
+	}
 }
