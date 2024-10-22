@@ -1,0 +1,49 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "contact": {}
+    },
+    "paths": {
+        "/healthcheck": {
+            "get": {
+                "description": "get healthcheck message",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "healthcheck"
+                ],
+                "summary": "Show a healthcheck message",
+                "responses": {}
+            }
+        },
+        "/qcode/{qcode}": {
+            "get": {
+                "description": "get qcode by code",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "qcode"
+                ],
+                "summary": "Show a Qcode description",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "QCode",
+                        "name": "qcode",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {}
+            }
+        }
+    }
+}
