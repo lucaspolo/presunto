@@ -33,3 +33,6 @@ test:
 
 lint: $(golangci-lint)
 	$(GOBIN)/golangci-lint-$(GOLANGCI_VERSION) run
+
+build-swagger:
+	@cd cmd; go run github.com/swaggo/swag/cmd/swag@latest init -g server.go -o ../docs
