@@ -1,0 +1,32 @@
+info:
+  contact: {}
+paths:
+  /healthcheck:
+    get:
+      consumes:
+      - application/json
+      description: get healthcheck message
+      produces:
+      - application/json
+      responses: {}
+      summary: Show a healthcheck message
+      tags:
+      - healthcheck
+  /qcode/{qcode}:
+    get:
+      consumes:
+      - application/json
+      description: get qcode by code
+      parameters:
+      - description: QCode
+        in: path
+        name: qcode
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses: {}
+      summary: Show a Qcode description
+      tags:
+      - qcode
+swagger: "2.0"
